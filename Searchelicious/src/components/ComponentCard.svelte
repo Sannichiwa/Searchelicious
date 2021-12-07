@@ -1,5 +1,16 @@
-<script></script>
+<script>
+	export let contentToDispaly = '';
+</script>
 
-This is the CARD component!
+<div id="card"><slot /></div>
 
-<style></style>
+<style>
+	#card {
+		background-color: rgb(32, 192, 139);
+		height: 100px;
+		width: auto;
+		border-radius: 15px;
+		box-shadow: 2px 2px 2px black;
+		font-size: 26px;
+	}
+</style>
