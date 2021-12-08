@@ -1,29 +1,25 @@
 <script>
+	// ONLY FINISHED COMPONENTS ALLOWED HERE!
 	import ComponentSearch from '../components/ComponentSearch.svelte';
 	import ComponentCard from '../components/ComponentCard.svelte';
 	import ComponentCardContainer from '../components/ComponentCardContainer.svelte';
-
-	let names = [
-		'Sannichiwa',
-		'Sanna',
-		'Jang-With-The-Int',
-		'Ronne',
-		'Mojbjoj Tim',
-		'Pelle R.I.P.',
-		'Bärgitta',
-		'Ivonlivona'
-	];
+	import ComponentAPIYouTubeSearch from '../components/ComponentAPIYouTubeSearch.svelte';
+	import CompRestAPITest from '../components/_CompRestAPITest.svelte';
+	import ComponentAPIRandomUser from '../components/ComponentAPIRandomUser.svelte';
+	import ComponentAPISpoonacular from '../components/ComponentAPISpoonacular.svelte';
 </script>
 
 <main>
-	<ComponentSearch />
+	<ComponentAPISpoonacular />
+
+	<!-- <ComponentSearch />
 	<ComponentCardContainer>
 		{#each names as name}
 			<ComponentCard>
 				{name}
 			</ComponentCard>
 		{/each}
-	</ComponentCardContainer>
+	</ComponentCardContainer> -->
 </main>
 
 <style>
