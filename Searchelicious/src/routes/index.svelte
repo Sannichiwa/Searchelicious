@@ -5,12 +5,12 @@
 	import ComponentCardContainer from '../components/ComponentCardContainer.svelte';
 	import ComponentAPIYouTubeSearch from '../components/ComponentAPIYouTubeSearch.svelte';
 	import CompRestAPITest from '../components/_CompRestAPITest.svelte';
-	import ComponentAPIRandomUser from '../components/ComponentAPIRandomUser.svelte';
 	import ComponentAPISpoonacular from '../components/ComponentAPISpoonacular.svelte';
+	import ComponentAPIReddit from '../components/ComponentAPIReddit.svelte';
 </script>
 
 <main>
-	<ComponentAPISpoonacular />
+	<ComponentAPIReddit />
 
 	<!-- <ComponentSearch />
 	<ComponentCardContainer>
