@@ -6,10 +6,10 @@
 	import ComponentAPIWikipedia from '../components/ComponentAPIWikipedia.svelte';
 </script>
 
-<div class="mainPageContainer">
-	<div id="firstCh" />
+<!-- <div class="header" /> -->
 
-	<div>
+<div class="main">
+	<div class="searchAndInstucions">
 		<ComponentSearch />
 	</div>
 
@@ -21,28 +21,27 @@
 </div>
 
 <style>
-	.mainPageContainer {
-		/* background-color: rgb(216, 216, 216); */
+	.main {
 		background-image: linear-gradient(to right, rgb(46, 44, 44), rgb(114, 134, 133));
-		grid-auto-flow: row;
+		display: grid;
+		grid: auto auto / auto;
 		gap: 10px;
-		align-content: center;
-		justify-content: center;
 		min-height: 100vh;
-		/* min-height: 100%; */
 		height: 100%;
+		min-width: 100vw;
+		min-width: min-content;
+		width: 100vw;
+		/* width: 100%; */
 	}
 
-	#firstCh {
-		height: 100px;
+	.searchAndInstucions {
+		display: grid;
 	}
 
 	.cardContainer {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		grid-column-gap: 10px;
-		grid-row-gap: 10px;
-		margin: 10px;
-		/* height: 100vh; */
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+		grid-row-gap: 20px;
+		margin: 50px;
 	}
 </style>

@@ -34,7 +34,7 @@
 <style>
 	/* card  */
 	.card {
-		background-color: rgb(141, 141, 141);
+		background-image: linear-gradient(to right, rgb(69, 83, 79), rgb(18, 133, 127));
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 10px;
@@ -51,8 +51,22 @@
 
 	/* every div in card */
 	.card div {
-		margin: 10px;
+		margin: 50px;
 		text-align: center;
+	}
+
+	::-webkit-scrollbar {
+		width: 3px;
+		height: 5px;
+	}
+	::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px rgb(53, 53, 53);
+		border-radius: 10px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: rgb(206, 188, 188);
+		border-radius: 10px;
 	}
 
 	.title {
