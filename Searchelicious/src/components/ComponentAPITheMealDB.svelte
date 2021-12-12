@@ -17,8 +17,8 @@
 	};
 </script>
 
+{#key $searchTerm}
 {#if $searchTerm !== ''}
-	{#key $searchTerm}
 		{#await getTheMealDBData() then data}
 			{#each data.meals as meal}
 				<div transition:fade>
@@ -28,5 +28,5 @@
 		{:catch error}
 			<p style="color: yellow">{error.message}</p>
 		{/await}
+		{/if}
 	{/key}
-{/if}

@@ -20,22 +20,24 @@
 </script>
 
 {#key $searchTerm}
-	{#await getRedditPosts() then data}
-		{#each data.data.children as post}
-			<div transition:fade>
-				<ComponentCard
-					provider="reddit"
-					title={post.data.title}
-					url={'https://www.reddit.com/' + post.data.permalink}
-					thumbnail={post.data.thumbnail !== 'self'
-						? post.data.thumbnail
-						: post.data.thumbnail !== 'image'
-						? redditThumbnail
-						: post.data.thumbnail}
-				/>
-			</div>
-		{/each}
-	{:catch error}
-		<p style="color: red">{error.message}</p>
-	{/await}
+	{#if $searchTerm !== ''}
+		{#await getRedditPosts() then data}
+			{#each data.data.children as post}
+				<div transition:fade>
+					<ComponentCard
+						provider="reddit"
+						title={post.data.title}
+						url={'https://www.reddit.com/' + post.data.permalink}
+						thumbnail={post.data.thumbnail !== 'self'
+							? post.data.thumbnail
+							: post.data.thumbnail !== 'image'
+							? redditThumbnail
+							: post.data.thumbnail}
+					/>
+				</div>
+			{/each}
+		{:catch error}
+			<p style="color: red">{error.message}</p>
+		{/await}
+	{/if}
 {/key}
