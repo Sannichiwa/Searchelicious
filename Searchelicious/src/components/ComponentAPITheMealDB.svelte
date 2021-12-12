@@ -18,15 +18,17 @@
 </script>
 
 {#key $searchTerm}
-{#if $searchTerm !== ''}
+	{#if $searchTerm !== ''}
 		{#await getTheMealDBData() then data}
-			{#each data.meals as meal}
-				<div transition:fade>
-					<ComponentCard provider="mealDB" description={meal.strInstructions} />
-				</div>
-			{/each}
+			{#if data.meals}
+				{#each data.meals as meal}
+					<div transition:fade>
+						<ComponentCard provider="mealDB" description={meal.strInstructions} />
+					</div>
+				{/each}
+			{/if}
 		{:catch error}
 			<p style="color: yellow">{error.message}</p>
 		{/await}
-		{/if}
-	{/key}
+	{/if}
+{/key}

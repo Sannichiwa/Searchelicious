@@ -28,11 +28,9 @@
 						provider="reddit"
 						title={post.data.title}
 						url={'https://www.reddit.com/' + post.data.permalink}
-						thumbnail={post.data.thumbnail !== 'self'
+						thumbnail={post.data.thumbnail !== 'self' && post.data.thumbnail !== 'image'
 							? post.data.thumbnail
-							: post.data.thumbnail !== 'image'
-							? redditThumbnail
-							: post.data.thumbnail}
+							: redditThumbnail}
 					/>
 				</div>
 			{/each}
