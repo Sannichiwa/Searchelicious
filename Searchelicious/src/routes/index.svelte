@@ -6,23 +6,35 @@
 	import ComponentAPIWikipedia from '../components/ComponentAPIWikipedia.svelte';
 </script>
 
-<main>
-	<ComponentSearch />
+<div class="mainPageContainer">
+	<div id="firstCh" />
+
+	<div>
+		<ComponentSearch />
+	</div>
+
 	<div class="cardContainer">
 		<ComponentAPIWikipedia />
 		<ComponentAPIReddit />
 		<ComponentAPITheMealDB />
 	</div>
-</main>
+</div>
 
 <style>
-	main {
-		background-color: gray;
+	.mainPageContainer {
+		/* background-color: rgb(216, 216, 216); */
+		background-image: linear-gradient(to right, rgb(46, 44, 44), rgb(114, 134, 133));
 		grid-auto-flow: row;
 		gap: 10px;
 		align-content: center;
 		justify-content: center;
-		margin: 10px;
+		min-height: 100vh;
+		/* min-height: 100%; */
+		height: 100%;
+	}
+
+	#firstCh {
+		height: 100px;
 	}
 
 	.cardContainer {
@@ -31,5 +43,6 @@
 		grid-column-gap: 10px;
 		grid-row-gap: 10px;
 		margin: 10px;
+		/* height: 100vh; */
 	}
 </style>

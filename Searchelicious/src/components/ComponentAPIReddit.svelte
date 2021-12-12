@@ -5,7 +5,7 @@
 
 	const redditThumbnail =
 		'https://www.adweek.com/wp-content/uploads/2019/10/Reddit-Logo-Horizontal-600x315.png';
-	$: url = `https://www.reddit.com/search.json?q=${$searchTerm}&limit=${$searchDisplayAmount}`;
+	$: url = `https://www.reddit.com/search.json?q=${$searchTerm} food&limit=${$searchDisplayAmount}`;
 
 	const getRedditPosts = async () => {
 		const res = await fetch(url);
@@ -26,9 +26,9 @@
 				<div transition:fade>
 					<ComponentCard
 						provider="reddit"
-						title={post.data.title}
+						title= {post.data.title}
 						url={'https://www.reddit.com/' + post.data.permalink}
-						thumbnail={post.data.thumbnail !== 'self' && post.data.thumbnail !== 'image'
+						thumbnail={post.data.thumbnail !== 'self' && post.data.thumbnail !== 'image' && post.data.thumbnail !== 'default'
 							? post.data.thumbnail
 							: redditThumbnail}
 					/>

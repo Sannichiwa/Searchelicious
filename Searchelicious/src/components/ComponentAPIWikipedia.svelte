@@ -8,10 +8,10 @@
 	let flickrImageIDs = [];
 
 	$: url_flickrPhotoSearch = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=70b6853e70c78137299f931a2d602700&tags=food&text=${$searchTerm}&per_page=${$searchDisplayAmount}&format=json&nojsoncallback=1`;
-	$: url = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=${$searchDisplayAmount}&srsearch=${$searchTerm}`;
+	$: url_wikipedia = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=${$searchDisplayAmount}&srsearch=${$searchTerm} food`;
 
 	const getWikipediaInformation = async () => {
-		const res = await fetch(url);
+		const res = await fetch(url_wikipedia);
 		const data = await res.json();
 
 		if (res.ok) {
@@ -28,7 +28,7 @@
 
 		if (res.ok) {
 			flickrImageIDs = data.photos.photo;
-			return data;
+			// return data;
 		} else {
 			throw new Error(data);
 		}

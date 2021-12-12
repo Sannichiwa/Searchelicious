@@ -42,12 +42,24 @@
 		display: grid;
 		grid-auto-flow: column;
 	}
-	#input {
-		background-color: aquamarine;
+	input {
+		background-color: rgb(255, 255, 255);
 		width: 400px;
+		height: 40px;
+		border: 1px solid black;
+		border-radius: 3px;
+		box-shadow: rgb(100, 100, 100);
+		
+		/* grid-template-rows: 200px; */
+		margin-left: 0;
 	}
-	.disabled {
-		color: rgb(228, 216, 216);
-		font-size: 14px;
+
+	button {
+		grid-column: 3;
+		grid-template-rows: 3;
+		width: 120px;
+		border: 1px solid black;
+		border-radius: 3px;
+		box-shadow: rgb(100, 100, 100);
 	}
 </style>

@@ -14,13 +14,13 @@
 {#if provider === 'reddit'}
 	<!-- REDDIT -->
 	<div class="card" on:click={() => openURLInNewTab(url)}>
+		<p>Relevant post from Reddit:</p>
 		<div class="title">{title}</div>
 		<img src={thumbnail} alt={title} />
 	</div>
 {:else if provider === 'wikipedia'}
 	<!-- WIKIPEDIA -->
 	<div class="card" on:click={() => openURLInNewTab(url)}>
-		<!-- <div id="wikiSpan" /> -->
 		<div>{@html description}</div>
 		<img src={thumbnail} alt="something delicious" />
 	</div>
@@ -34,7 +34,7 @@
 <style>
 	/* card  */
 	.card {
-		background-color: rgb(87, 87, 87);
+		background-color: rgb(141, 141, 141);
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 10px;
