@@ -32,12 +32,6 @@
 {/if}
 
 <style>
-	main {
-		/* background-color: gray; */
-		display: grid;
-		gap: 10px;
-	}
-
 	/* card  */
 	.card {
 		background-color: rgb(87, 87, 87);

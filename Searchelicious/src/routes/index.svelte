@@ -1,13 +1,7 @@
 <script>
 	// ONLY FINISHED COMPONENTS ALLOWED HERE!
 	import ComponentSearch from '../components/ComponentSearch.svelte';
-	import ComponentCard from '../components/ComponentCard.svelte';
-	import ComponentCardContainer from '../components/ComponentCardContainer.svelte';
-	import ComponentAPIYouTubeSearch from '../components/ComponentAPIYouTubeSearch.svelte';
-	import CompRestAPITest from '../components/_CompRestAPITest.svelte';
-	import ComponentAPISpoonacular from '../components/ComponentAPISpoonacular.svelte';
 	import ComponentAPIReddit from '../components/ComponentAPIReddit.svelte';
-	import ComponentAPIRandomUsers from '../components/ComponentAPIRandomUsers.svelte';
 	import ComponentAPITheMealDB from '../components/ComponentAPITheMealDB.svelte';
 	import ComponentAPIWikipedia from '../components/ComponentAPIWikipedia.svelte';
 </script>
@@ -18,15 +12,12 @@
 		<ComponentAPIWikipedia />
 		<ComponentAPIReddit />
 		<ComponentAPITheMealDB />
-		<!-- <ComponentAPIRandomUsers /> -->
-		<!-- <ComponentAPISpoonacular /> -->
 	</div>
 </main>
 
 <style>
 	main {
 		background-color: gray;
-		/* display: grid; */
 		grid-auto-flow: row;
 		gap: 10px;
 		align-content: center;

@@ -45,21 +45,20 @@
 </script>
 
 {#key $searchTerm}
-{#if $searchTerm !== ''}
-
-	{#await getWikipediaInformation() then data}
-		{#each data.query.search as post, i}
-			<div transition:fade>
-				<ComponentCard
-					provider="wikipedia"
-					description={post.snippet}
-					url={`https://en.wikipedia.org/?curid=${post.pageid}`}
-					thumbnail={getFlickrPhoto(i)}
-				/>
-			</div>
-		{/each}
-	{:catch error}
-		<p style="color: red">{error.message}</p>
-	{/await}
+	{#if $searchTerm !== ''}
+		{#await getWikipediaInformation() then data}
+			{#each data.query.search as post, i}
+				<div transition:fade>
+					<ComponentCard
+						provider="wikipedia"
+						description={post.snippet}
+						url={`https://en.wikipedia.org/?curid=${post.pageid}`}
+						thumbnail={getFlickrPhoto(i)}
+					/>
+				</div>
+			{/each}
+		{:catch error}
+			<p style="color: red">{error.message}</p>
+		{/await}
 	{/if}
 {/key}
