@@ -8,13 +8,17 @@
 	import ComponentAPISpoonacular from '../components/ComponentAPISpoonacular.svelte';
 	import ComponentAPIReddit from '../components/ComponentAPIReddit.svelte';
 	import ComponentAPIRandomUsers from '../components/ComponentAPIRandomUsers.svelte';
+	import ComponentAPITheMealDB from '../components/ComponentAPITheMealDB.svelte';
+	import ComponentAPIWikipedia from '../components/ComponentAPIWikipedia.svelte';
 </script>
 
 <main>
 	<ComponentSearch />
 	<div class="cardContainer">
+		<ComponentAPIWikipedia />
 		<ComponentAPIReddit />
-		<ComponentAPIRandomUsers />
+		<ComponentAPITheMealDB />
+		<!-- <ComponentAPIRandomUsers /> -->
 		<!-- <ComponentAPISpoonacular /> -->
 	</div>
 </main>

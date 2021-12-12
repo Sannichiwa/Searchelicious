@@ -1,24 +1,35 @@
 <script>
 	// these are the PROPS of this element
+	export let provider = '';
 	export let title = '';
+	export let description = '';
 	export let url = '';
-	export let thumbnail =
-		'https://www.adweek.com/wp-content/uploads/2019/10/Reddit-Logo-Horizontal-600x315.png';
+	export let thumbnail = '';
 
 	const openURLInNewTab = (urlAddress) => {
 		window.open(urlAddress, '_blank').focus();
 	};
 </script>
 
-<div class="card" on:click={() => openURLInNewTab(url)}>
-	<div class="title">{title}</div>
-
-	{#if { thumbnail } !== 'self'}
-		<img src={thumbnail} alt="Thumbnail" />
-	{:else}
-		<img src={thumbnail} alt="Thumbnail" />
-	{/if}
-</div>
+{#if provider === 'reddit'}
+	<!-- REDDIT -->
+	<div class="card" on:click={() => openURLInNewTab(url)}>
+		<div class="title">{title}</div>
+		<img src={thumbnail} alt={title} />
+	</div>
+{:else if provider === 'wikipedia'}
+	<!-- WIKIPEDIA -->
+	<div class="card" on:click={() => openURLInNewTab(url)}>
+		<!-- <div id="wikiSpan" /> -->
+		<div>{@html description}</div>
+		<img src={thumbnail} alt="something delicious" />
+	</div>
+{:else if provider === 'mealDB'}
+	<!-- THE-MEAL-DB -->
+	<div class="card" on:click={() => openURLInNewTab(url)}>
+		<div>{description}</div>
+	</div>
+{/if}
 
 <style>
 	main {
@@ -40,6 +51,8 @@
 		border-radius: 15px;
 		box-shadow: 2px 2px 2px rgb(56, 56, 56);
 		cursor: pointer;
+		padding: 5px;
+		overflow: scroll;
 	}
 
 	/* every div in card */
