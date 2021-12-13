@@ -69,6 +69,7 @@
 		width: 400px;
 		height: 40px;
 		border: 1px solid black;
+		border: none;
 		border-radius: 3px;
 		box-shadow: rgb(100, 100, 100);
 	}
@@ -78,6 +79,7 @@
 		height: 44px;
 		width: 100px;
 		border: 1px solid black;
+		border: none;
 		border-radius: 3px;
 		box-shadow: rgb(100, 100, 100);
 		transition-duration: 0.4s;
