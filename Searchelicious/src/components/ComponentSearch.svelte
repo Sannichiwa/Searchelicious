@@ -57,6 +57,7 @@
 
 	.searchInputAndText p {
 		color: white;
+		font-style: italic;
 	}
 
 	.searchInputAndText h2 {
@@ -79,5 +80,12 @@
 		border: 1px solid black;
 		border-radius: 3px;
 		box-shadow: rgb(100, 100, 100);
+		transition-duration: 0.4s;
+		font-family: 'Raleway', sans-serif;
+	}
+
+	button:hover {
+		background-color: #4b554c; /* Green */
+		color: white;
 	}
 </style>

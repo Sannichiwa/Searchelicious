@@ -31,7 +31,7 @@
 		min-width: 100vw;
 		min-width: min-content;
 		width: 100vw;
-		/* width: 100%; */
+		font-family: 'Raleway', sans-serif;
 	}
 
 	.searchAndInstucions {
@@ -44,4 +44,6 @@
 		grid-row-gap: 20px;
 		margin: 50px;
 	}
+
+	 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 </style>
