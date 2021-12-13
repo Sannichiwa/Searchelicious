@@ -14,7 +14,7 @@
 {#if provider === 'reddit'}
 	<!-- REDDIT -->
 	<div class="card" on:click={() => openURLInNewTab(url)}>
-		<p>Relevant post from Reddit</p>
+		<p>Posts about it from Reddit</p>
 		<div class="title">{title}</div>
 		<img src={thumbnail} alt={title} />
 	</div>

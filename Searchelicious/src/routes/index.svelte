@@ -6,7 +6,6 @@
 	import ComponentAPIWikipedia from '../components/ComponentAPIWikipedia.svelte';
 </script>
 
-<!-- <div class="header" /> -->
 
 <div class="main">
 	<div class="searchAndInstucions">

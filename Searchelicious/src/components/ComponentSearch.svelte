@@ -17,21 +17,11 @@
 		if (cancelIfStringIsEmpty() === false) return;
 
 		searchTerm.set(userInputSearchText);
-		// searchDisplayAmount.set(userSearchAmount);
 		userInputSearchText = '';
 	};
 </script>
 
 <main>
-	<!-- <select bind:value={userSearchAmount} on:change={() => changesearchDisplayAmount()}
-		>Amount
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="5">5</option>
-		<option value="10">10</option>
-	</select> -->
-
 	<div class="searchInputAndText">
 		<h2>Search for a dish/food of your choice</h2>
 		<p>For example: Lasagne, Ramen or Tacos</p>
@@ -87,7 +77,7 @@
 	}
 
 	button:hover {
-		background-color: #4b554c; /* Green */
+		background-color: #9a9e9a; 
 		color: white;
 	}
 </style>
